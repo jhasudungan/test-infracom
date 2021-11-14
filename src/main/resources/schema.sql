@@ -1,0 +1,11 @@
+CREATE TABLE user (
+    id VARCHAR(200) NOT NULL PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    age INTEGER(100) NOT NULL
+);
+
+CREATE TABLE user_contact (
+    id VARCHAR(200) NOT NULL PRIMARY KEY,
+    address VARCHAR(200) NOT NULL,
+    user_id VARCHAR(200) NOT NULL REFERENCES user(id)
+);
